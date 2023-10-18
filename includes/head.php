@@ -21,7 +21,6 @@
   <!-- Bootstrap CSS -->
   <link href="<?php echo _URL_ ?>/assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="<?php echo _URL_ ?>/assets/css/main.css" rel="stylesheet">
-
   <title>Integrando Site com o RD STAION</title>
 </head>
 
@@ -37,11 +36,10 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <!-- 
-
           <a class="nav-link active" aria-current="page" href="<?php echo _URL_ ?>/novo_aplicativo.php">Aplicativos </a>
           -->
           <a class="nav-link" href="<?php echo _URL_ ?>/relatorio.php">Relatorio Marketing</a>
-          <a class="nav-link" href="<?php echo _URL_ ?>/atualizar.php">Atualizar API</a>
+          <a class="nav-link" href="<?php echo _URL_ ?>/app/Controllers/AtualizarController.php">Atualizar API</a>
         </div>
       </div>
     </div>

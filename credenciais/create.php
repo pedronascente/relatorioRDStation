@@ -27,7 +27,7 @@
 						<div class="text-center">
 							<p>Agora que seu aplicativo foi criado na RD Station App Store, Registre suas credênciais no formulário abaixo.</p>
 						</div>
-						<form action="<?php echo _URL_ ?>/app/controllers/RegistrarCredenciaisController.php" method="post">
+						<form action="<?php echo _URL_ ?>/app/Controllers/RegistrarCredenciaisController.php" method="post">
 							<input type="hidden" name="nome" value="<?php echo $app; ?>" required="">
 							<input type="hidden" name="app" value="<?php echo _URL_ . "/app/index.php?app=$app" ?>" required="">
 							<input type="hidden" name="callback" value="<?php echo _URL_ . "/callback/index.php?app=$app"; ?>" required="">

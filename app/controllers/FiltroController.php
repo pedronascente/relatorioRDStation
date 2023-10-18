@@ -20,6 +20,6 @@ if ($filtro) {
   $_SESSION['filtro'] = $filtro;
 
   // Redirecione para a página relatorio.php
-  header('Location: relatorio.php');
+  header('Location: ../../relatorio.php');
   exit; // Certifique-se de sair para evitar a execução adicional do código
 }

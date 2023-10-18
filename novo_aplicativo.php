@@ -15,7 +15,7 @@ $array_lista_aplicativos = $conecta->listar_os_aplicativos_registrados();
 	<p># Caso seja sua primeira integração , crie seu Aplicativo abaixo para cadastrar suas credenciais:</p>
 	<hr>
 
-	<form action="<?php echo _URL_ ?>/app/controllers/NovoAplicativoController.php" method="post">
+	<form action="<?php echo _URL_ ?>/app/Controllers/NovoAplicativoController.php" method="post">
 		<div class="form-group">
 			<label>Nome:</label>
 			<input type="text" name="nome" class="form-control" placeholder="Digite o nome do Aplicativo" required="">
@@ -45,7 +45,7 @@ $array_lista_aplicativos = $conecta->listar_os_aplicativos_registrados();
 				foreach ($array_lista_aplicativos as $value) {
 					$id = $value["id"];
 					$nome = $value["nome"];
-					$url = _URL_ . "/app/controllers/DeleteAplicativoController.php?id={$id}";
+					$url = _URL_ . "/app/Controllers/DeleteAplicativoController.php?id={$id}";
 					$_li  = '<tr>';
 					$_li .= '<td>' . $id . '</td>';
 					$_li .= '<th scope="row"><a href="' . _URL_ . '/registrar_credenciais.php?app=' . $nome . '">' . $nome . '</a></th>';
@@ -61,14 +61,5 @@ $array_lista_aplicativos = $conecta->listar_os_aplicativos_registrados();
 	</table>
 </div>
 
+
 <?php include_once __DIR__ . '/includes/footer.php'; ?>
-<script>
-	$(function() {
-		$('a#delete').click(function() {
-			var url = $(this).attr('data-url');
-			if (confirm("Deseja deletar este registro ?")) {
-				$(this).attr("href", url);
-			}
-		});
-	});
-</script>

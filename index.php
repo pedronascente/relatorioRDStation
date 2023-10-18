@@ -30,7 +30,7 @@
 </head>
 
 <body class="text-center">
-  <form class="form-signin" action="app/controllers/LoginController.php" method="post">
+  <form class="form-signin" action="app/Controllers/LoginController.php" method="post">
     <img class="mb-4" src="assets/img/apple-touch-icon-114x114-aa43269c50a14dd201ab2880f3a609aa809ff65d81587d5278addf50abe54283.png" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Olá</h1>
     <?php if (isset($_SESSION['nao_autenticado'])) { ?>

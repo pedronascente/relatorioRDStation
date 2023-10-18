@@ -20,12 +20,10 @@ $resultado = $relatorio->gerarRelatorio($filtro);
 
 if ($filtro !== null) {
   $filtro_explode = explode('-', $filtro);
-
   $filtro_modificado = $filtro_explode[2] . '/' . $filtro_explode[1] . '/' . $filtro_explode[0];
 } else {
   $filtro = null;
 }
-
 ?>
 
 <div class="row">
@@ -33,7 +31,7 @@ if ($filtro !== null) {
     <div class="alert alert-dark" role="alert">
       <h4>Filtro</h4>
       <hr>
-      <form action="<?php echo _URL_ ?>/filtro.php" method="POST">
+      <form action="<?php echo _URL_ ?>/app/Controllers/filtroController.php" method="POST">
         <div class="input-group">
           <input type="text" name="filtro" class="form-control datepicker" placeholder="__/__/__ " value="<?php echo $filtro_modificado; ?>">
           <div class="input-group-append">
@@ -51,7 +49,6 @@ if ($filtro !== null) {
     </div>
   </div>
 </div>
-
 <div class="row">
   <?php if (isset($resultado)) { ?>
     <?php foreach ($resultado as $k => $p) { ?>
@@ -87,29 +84,9 @@ if ($filtro !== null) {
             </div>
           </div>
         </div>
-
       <?php }  ?>
     <?php }  ?>
   <?php }  ?>
 </div>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
-<!-- Inclua o Bootstrap Datepicker CSS e JS -->
-<link rel="stylesheet" href="<?php echo _URL_ ?>/assets/plugin/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
-<script src="<?php echo _URL_ ?>/assets/js/jquery-3.6.0.min.js"></script>
-<script src="<?php echo _URL_ ?>/assets/plugin/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-<script src="<?php echo _URL_ ?>/assets/plugin/bootstrap-datepicker/js/bootstrap-datepicker.pt-BR.min.js"></script>
-
-<script>
-  $(document).ready(function() {
-    $('.datepicker').datepicker({
-      format: 'dd/mm/yyyy',
-      language: 'pt-BR',
-      autoclose: true // Adicione esta opção
-    });
-  });
-</script>
 
 <?php include_once(__DIR__ .  "/includes/footer.php"); ?>
