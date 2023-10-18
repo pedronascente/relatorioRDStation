@@ -1,0 +1,33 @@
+body{    background-color: #f5f5f5;}
+
+.page-header {
+    padding: 1.1em 0;
+    border-bottom: 1px solid #D9DDE4;
+}
+.bg-white {
+    background-color: #fff !important;
+}
+
+.page-header h1 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.text-secondary {
+    color: #364a65 !important;
+}
+
+.page-header h2 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.text-muted {
+    color: #95a2af !important;
+}
+
+.bg-secondary {
+    background-color: #364a65 !important;
+}
